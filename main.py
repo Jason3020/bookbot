@@ -3,7 +3,13 @@ def get_book_text():
         file_contents = file.read()
         print(file_contents)
 
+def count_words():
+    with open("books/frankenstein.txt") as file:
+        words = file.read().split()
+        
+    return f"Found {len(words)} total words"
+        
 def main():
-    get_book_text()
+    print(count_words())
 
 main()
